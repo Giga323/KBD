@@ -1,0 +1,16 @@
+<div class="content-wrapper">
+
+  <div class="content-wrapper__search">
+    <input class="content-wrapper__search__input" #input>
+    <button (click)="sendRequest(input.value)" class="content-wrapper__search__button">send</button>
+  </div>
+
+  <div class="content-wrapper__content">
+    <ng-container *ngFor="let item of data">
+      <div class="content-wrapper__content__item">
+        {{item | json}}
+      </div>
+    </ng-container>
+  </div>
+
+</div>
